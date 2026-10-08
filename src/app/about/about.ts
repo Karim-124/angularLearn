@@ -1,41 +1,17 @@
 import { Component } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-about',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './about.html',
   styleUrl: './about.css',
 })
-export class About {}
+export class About {
+  userName: string = 'Karim abdelazims';
+  imgSrc: string = 'assets/karim.jpg';
 
-let fr: string[] = [
-  'a',
-  'b',
-  'c',
-  'd',
-  'e',
-  'f',
-  'g',
-  'h',
-  'i',
-  'j',
-  'k',
-  'l',
-  'm',
-  'n',
-  'o',
-  'p',
-  'q',
-  'r',
-  's',
-  't',
-  'u',
-  'v',
-  'w',
-  'x',
-  'y',
-  'z',
-];
-let productKey: [string, number];
-productKey = ['a', 1];
-  
+  sayHello() {
+    alert(`Hello ${this.userName}`);
+  }
+}
